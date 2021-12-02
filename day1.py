@@ -3,7 +3,7 @@
 with open("input1.txt") as f:
     text = f.read()
 
-print( text.count("(") - text.count(")"))
+print(text.count("(") - text.count(")"))
 
 # Part 2
 position = 0

@@ -5,8 +5,8 @@ with open("input3.txt") as f:
 
 houses = {}
 houses_2 = {}
-houses[(0,0)] = True
-houses_2[(0,0)] = True
+houses[(0, 0)] = True
+houses_2[(0, 0)] = True
 x = y = 0
 x_s = y_s = x_r = y_r = 0
 
@@ -35,7 +35,7 @@ for i, direction in enumerate(directions):
             y_s -= 1
         else:
             y_r -= 1
-    houses[(x,y)] = True
+    houses[(x, y)] = True
     houses_2[(x_s, y_s)] = True
     houses_2[(x_r, y_r)] = True
 

@@ -2,6 +2,7 @@
 
 import numpy as np
 
+
 def turn_on(start, stop, grid):
     x0, y0 = start
     x1, y1 = stop
@@ -54,6 +55,7 @@ def turn_off_2(start, stop, grid):
         for j in range(y0, y1 + 1):
             grid[i * 1000 + j] = max(grid[i * 1000 + j] - 1, 0)
     return grid
+
 
 if __name__ == "__main__":
 

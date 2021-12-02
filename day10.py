@@ -5,6 +5,7 @@ INPUT = "1113222113"
 i = 0
 s = INPUT
 
+
 def one_step(s):
     length = len(s)
     if length == 1:
@@ -24,10 +25,12 @@ def one_step(s):
     new_s += str(count) + current_char
     return new_s
 
+
 def n_steps(s, n):
     for _ in range(n):
         s = one_step(s)
     return s
+
 
 print("Part 1:\t", len(n_steps(INPUT, 40)))
 print("Part 2:\t", len(n_steps(INPUT, 50)))

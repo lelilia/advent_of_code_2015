@@ -14,6 +14,7 @@ def part_1(input):
         int_add += 1
     print(int_add)
 
+
 def part_2(input):
     int_add = 0
     while True:
@@ -22,6 +23,7 @@ def part_2(input):
             break
         int_add += 1
     print(int_add)
+
 
 part_1(input)
 part_2(input)

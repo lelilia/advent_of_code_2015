@@ -19,8 +19,8 @@ for line in input:
 circuit_1 = dict(circuit)
 circuit_2 = dict(circuit)
 
-def get_res(circuit, target):
 
+def get_res(circuit, target):
 
     if type(circuit[target]) == int:
         return circuit[target]
@@ -61,6 +61,7 @@ def get_res(circuit, target):
 
         circuit[target] = circuit[target] % 65536
     return circuit[target]
+
 
 a = get_res(circuit_1, "a")
 print("Part1:\t", a)

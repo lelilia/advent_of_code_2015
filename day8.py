@@ -13,6 +13,6 @@ print("Part 1:\t", length)
 length2 = 0
 with open(INPUT_FILE) as f:
     for s in f:
-        length2 += 2 + s.count("\"") + s.count("\\")
+        length2 += 2 + s.count('"') + s.count("\\")
 
 print("Part 2:\t", length2)
