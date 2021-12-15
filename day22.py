@@ -10,12 +10,25 @@ SPELL_BOOK = {
     1: [73, 2, 2, 1, 0, 0],
     2: [113, 0, 0, 6, 7, 0],
     3: [173, 3, 0, 6, 0, 0],
-    4: [229, 0, 0, 5, 0, 101]
+    4: [229, 0, 0, 5, 0, 101],
 }
+
 
 def find_minimal_cost(part=1):
     minimal_mana_costs = 9999999999999
-    q = [[i, BOSS_HITPOINTS, BOSS_DAMAGE, PLAYER_HITPOINTS, PLAYER_MANA, {0: 0, 1:0, 2:0, 3:0, 4:0}, 0, []] for i in range(5)]
+    q = [
+        [
+            i,
+            BOSS_HITPOINTS,
+            BOSS_DAMAGE,
+            PLAYER_HITPOINTS,
+            PLAYER_MANA,
+            {0: 0, 1: 0, 2: 0, 3: 0, 4: 0},
+            0,
+            [],
+        ]
+        for i in range(5)
+    ]
 
     while len(q) > 0:
         spell, bh, bd, ph, pm, a_s, tmc, moves = q.pop(0)
@@ -74,6 +87,7 @@ def find_minimal_cost(part=1):
                 continue
             q.append([s, bh, bd, ph, pm, active_spells, tmc, moves + [spell]])
     return minimal_mana_costs
+
 
 print("Part 1:\t", find_minimal_cost(part=1))
 print("Part 2:\t", find_minimal_cost(part=2))

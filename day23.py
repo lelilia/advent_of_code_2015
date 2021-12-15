@@ -2,6 +2,7 @@
 
 INPUT_FILE = "input23.txt"
 
+
 def execute_computer(input_text, register):
     position = 0
     while position < len(input_text):
@@ -37,6 +38,7 @@ def execute_computer(input_text, register):
             else:
                 position += 1
     return register["b"]
+
 
 with open(INPUT_FILE) as f:
     input_text = f.readlines()
